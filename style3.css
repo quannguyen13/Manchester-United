@@ -111,6 +111,7 @@ visibility: visible;
     visibility: hidden;
     border: none;
     box-shadow: 0 0 10px 10px #f6f6f6;
+    padding-bottom: 150px;
     /* overflow: auto; */
 }
 /* .option input:checked .option{

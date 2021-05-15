@@ -99,7 +99,7 @@ var opt4 = document.getElementById('opt4');
 var nextButton = document.getElementById('nextButton');
 var finishButton = document.getElementById('finishQuestion')
 var resultCont = document.getElementById('result'); 
-
+console.dir(opt1)
 function loadQuestion(questionIndex){
     var q = questions[questionIndex]
     questionEl.textContent = (questionIndex + 1) + '. ' + q.question
@@ -113,50 +113,71 @@ function loadQuestion(questionIndex){
 
 
 
+// var buttons = document.querySelectorAll('option')
+var button1 = document.querySelector('.option1')
+
+opt1.addEventListener("click", clickOpt1)
+var button2 = document.querySelector('.option2')
+opt2.addEventListener("click", clickOpt2)
+var button3 = document.querySelector('.option3')
+opt3.addEventListener("click", clickOpt3)
+var button4 = document.querySelector('.option4')
+opt4.addEventListener("click", clickOpt4)
 
 
-
-// var buttons = document.querySelectorAll('.option')
-// buttons.forEach(button => button.addEventListener('click', function(){
-   
-//     button.style.backgroundColor = "green"
-//     buttons.forEach(remove => remove.removeEventListener('click', function(){
-//         remove.style.backgroundColor = "green"
-//     }));
-   
-   
-   
+function clickOpt1(event){
     
+    console.log("opt1 clicked")
     
-// }))
+    button1.style.background = ('green')
+    button2.style.background = ('')
+    button3.style.background = ('')
+    button4.style.background = ('')
+    // console.log(event)
+    
+}
+function clickOpt2(event){
+   
+    console.log("opt2 clicked")
+ 
+    button2.style.background = ('green')
+    button1.style.background = ('')
+    button3.style.background = ('')
+    button4.style.background = ('')
+    // console.log(event)
+    
+}
+function clickOpt3(event){
+    
+    console.log("opt3 clicked")
+  
+    button3.style.background = ('green')
+    button1.style.background = ('')
+    button2.style.background = ('')
+    button4.style.background = ('')
+    // console.log(event)
+    
+}
+function clickOpt4(event){
+    
+    console.log("opt4 clicked")
+  
+    button4.style.background = ('green')
+    button1.style.background = ('')
+    button2.style.background = ('')
+    button3.style.background = ('')
+    // console.log(event)
+    
+}
 
 
-//     // event.preventDefault();
-//     console.log("click");
-//     // if you want to remove event listener 
-//     // button.removeEventListener("click", fn);
 
-//     // if you don't want to remove it
-//     // button.disabled = true;
+   
 
-//     // using css (this also don't removes listener)
-//     // button.style.backgroundColor = "none";
 
-//     button.style.backgroundColor = "green"
-
-// function changeToGreen(){
-//     selectedOption.style.backgroundColor = 'green'
-//     //  if(!selectedOption){
-//     //     style.backgroundColor = 'none'
-//     //  }
-//   }
 
 function loadNextQuestion(){
     var selectedOption = document.querySelector('input[type=radio]:checked')
-    // selectedOption.style.backgroundColor = "green"
-    // console.log(selectedOption)
-    
-      
     if(!selectedOption){
         alert('Please select your answer')
         return
@@ -165,6 +186,7 @@ function loadNextQuestion(){
     if(questions[currentQuestion].answer == answer){
         score += 10
         alert(`you made ${score}`)
+        
     }
     if(questions[currentQuestion].answer != answer){
         score += 0
@@ -174,14 +196,13 @@ function loadNextQuestion(){
     currentQuestion++
     if(currentQuestion == totQuestion - 1 ){
         nextButton.textContent = "Finish"
-        // nextButton.style.visibility = "hidden"
-        // finishButton.style.visibility = "visible"
+   
     }
     if(currentQuestion == totQuestion){
         container.style.visibility = 'hidden';
         resultCont.style.visibility = 'visible';
         resultCont.textContent = 'Your Score ' + score;
-        // finishQuestion
+        
         if ( score >= 100 ){
             resultCont.textContent = 'Your Score ' + score + '. You Are Legend Fan!!';
         
@@ -200,7 +221,11 @@ function loadNextQuestion(){
     }
     loadQuestion(currentQuestion);
 
-
+    
+    button2.style.background = ('rgba(255, 255, 255, .5)')
+    button1.style.background = ('rgba(255, 255, 255, .5)')
+    button3.style.background = ('rgba(255, 255, 255, .5)')
+    button4.style.background = ('rgba(255, 255, 255, .5)')
   
 }
 loadQuestion(currentQuestion)

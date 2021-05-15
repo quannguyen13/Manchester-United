@@ -1,11 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+
 body{
     font-family: 'Times New Roman', Times, serif;
-    background: #6cf;
     background-image: url(old-trafford.jpg);
+    -webkit-background-size:cover;
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
 }
 .container{
     height: 330px;
-    width: 1000px;
+    width: 1010px;
     position: absolute;
     top:50%;
     left: 50%;
@@ -17,7 +30,8 @@ body{
     visibility: visible;
     font-size: 25px;
     font-weight: bold;
-    padding-bottom: 25px;
+    padding-bottom: 22rem;
+    
 }
 .title{
     padding-top: 20px;
@@ -30,11 +44,12 @@ body{
 .question{
     padding: 20px;
     font-size: 22px;
-    background: #06060e;
+    background: rgba(0, 0, 0, 0.74);
     border-radius: 20px;
     margin: 10px 0 10px 0;
     color: #f6f6f6;
-    width: 950px;
+    width: 987px;
+    
 }
 
  /* .option{
@@ -68,9 +83,10 @@ body{
     margin: 20px;
     border-radius: 10px;
     font-size: 16px;
-    padding-top: 12px;
+    padding: 5px;
     text-align: center;
     font-weight: bolder;
+    
 }
 .next-btn:hover{
     background:green;
@@ -109,6 +125,7 @@ visibility: visible;
 
 
 .option {
+    
     text-align: center;
     width: 490px;
     display: inline-block;
@@ -116,6 +133,7 @@ visibility: visible;
     margin: 10px 0 10px 0;
     vertical-align: middle;
     background: rgba(255, 255, 255, .5);
+   background-color: white;
     color: #000000;
     border-radius: 20px;
     -webkit-user-select: none;
@@ -123,40 +141,53 @@ visibility: visible;
     -ms-user-select: none;
     user-select: none;
 } 
-.option1{
-    background: green;
+.option1, .option2, .option3, .option4{
+    text-align: center;
+    width: 490px;
+    display: inline-block;
+    padding: 10px 0 10px 0;
+    margin: 10px 0 10px 0;
+    vertical-align: middle;
+    background-color: rgba(255, 255, 255, .5);
+    color: #000000;
+    border-radius: 20px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
-.option:hover{
+
+
+ .option:hover{
     color: black;
     background-color: green;
-    color: #f6f6f6;
-    transition-duration: 1s;
+    
+    transition-duration: .5s;
     font-size: 25px;
     font-weight: bolder;
     cursor: pointer;
     
 } 
 
-
-.option:focus-within{
+/* .option:focus-within{
     
     background-color: green;
-    color: #f6f6f6;
-    transition-duration: 1s;
+    color: black;
+    transition-duration: .5s;
     font-size: 25px;
     font-weight: bolder;
     cursor: pointer;
     
-}
-/* input[type="radio"]{  */
+} */
+input[type="radio"]{ 
     /* display: none; */
     /* visibility: hidden; */
     /* opacity: 0; */
-    /* position: absolute; */
-    /* left:-9999px; */
- /* }  */
-/* .option input[type="radio"] { */
-    /* background-color: green; */
-    /* opacity: 0; */
-/* } */
+    position: absolute;
+    left:-9999px;
+ } 
+.option input[type="radio"]{
+    background-color: green;
+    opacity: 0;
+}
 

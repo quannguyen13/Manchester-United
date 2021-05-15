@@ -21,4 +21,4 @@ Manchester United is one of the most popular football clubs in the world and has
 - This game contain 10 questions mainly focus to your knowledge and make a selection of answer in each question to earn point. The more points you earn the more prove of your knowledge to be a real true fan.
 
 ## GAME RULE
-&#x1F534; <b>Red Devils Spirit!!</b> <br>There is no turn banck or re-select once you hit next question and you only know your earned points at the end to determine that how much knowledge of yours.
+&#x1F534; <b>Red Devils Spirit!!</b> <br>There is no turn banck or re-select once you hit next question and you only know your earned points at the end to show that how much you love your club.

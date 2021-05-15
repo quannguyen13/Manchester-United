@@ -1,6 +1,4 @@
----
-permalink: /index3.html
----
+
 
 # TRUE FAN QUIZ GAME
 

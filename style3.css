@@ -1,7 +1,7 @@
 body{
     font-family: 'Times New Roman', Times, serif;
     background: #6cf;
-    background-image: url(/old-trafford.jpg);
+    background-image: url(old-trafford.jpg);
 }
 .container{
     height: 330px;
